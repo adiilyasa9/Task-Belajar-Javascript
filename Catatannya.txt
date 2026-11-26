@@ -1,0 +1,132 @@
+1. Variabel (Wadah Penyimpanan Data)
+Variabel adalah tempat untuk menyimpan data agar bisa dipanggil dan digunakan oleh program. Di JavaScript modern, ada dua kata kunci utama untuk membuatnya:
+
+let: Digunakan jika isi datanya bisa atau akan diubah di kemudian hari.
+
+JavaScript
+let skor = 10;
+skor = 15; // Nilai berhasil diperbarui menjadi 15
+========================================================================================================
+const: Kependekan dari constant. Digunakan jika isi datanya pasti dan tidak boleh diubah lagi. Jika Anda mencoba mengubahnya, program akan error.
+
+JavaScript
+const tahunLahir = 2004;
+// tahunLahir = 2005; // Ini akan menyebabkan error!
+========================================================================================================
+2. Tipe Data (Jenis Isi Wadah)
+Setelah menyiapkan penyimpanannya, Anda perlu tahu bentuk data apa saja yang bisa dimasukkan.
+
+Boolean: Tipe data logika yang paling sederhana karena hanya punya dua nilai mutlak: true (benar) atau false (salah). Sangat berguna untuk logika kondisi atau menandai status (seperti sakelar lampu menyala/mati).
+
+JavaScript
+let sudahLulus = true;
+let sedangHujan = false;
+========================================================================================================
+String: Tipe data berupa teks. Wajib dibungkus dengan tanda kutip tunggal ('...'), ganda ("..."), atau backtick (`...`).
+
+JavaScript
+let nama = "Budi";
+========================================================================================================
+Number: Tipe data berupa angka (baik bilangan bulat maupun desimal). Ditulis langsung tanpa tanda kutip.
+
+JavaScript
+let umur = 20;
+let beratBadan = 65.5; // Angka desimal menggunakan titik, bukan koma
+
+========================================================================================================Array: Tipe data untuk menyimpan banyak nilai sekaligus secara berurutan dalam satu variabel. Dibungkus dengan kurung siku [].
+
+JavaScript
+let daftarBelanja = ["Apel", "Telur", "Susu"];
+========================================================================================================
+Object: Tipe data untuk menyimpan data yang memiliki rincian atau label khusus (disebut properti). Dibungkus dengan kurung kurawal {}.
+
+JavaScript
+let profilKaryawan = {
+  nama: "Sakti",
+  umur: 20,
+  isAktif: true
+};
+========================================================================================================
+3. Operator (Alat Hitung & Pengecek)
+Operator digunakan untuk memanipulasi atau membandingkan variabel.
+
+Operator Aritmatika: Untuk perhitungan matematika biasa seperti + (tambah), - (kurang), * (kali), / (bagi).
+
+Operator Perbandingan: Untuk membandingkan dua nilai. Hasil dari perbandingan ini akan selalu berupa Boolean (true atau false).
+
+=== (Apakah isinya persis sama?)
+
+!== (Apakah isinya tidak sama?)
+
+> (Lebih besar dari) / < (Lebih kecil dari)
+
+JavaScript
+let stokBarang = 5;
+console.log(stokBarang > 0); // Output: true
+console.log(stokBarang === 10); // Output: false
+========================================================================================================
+4. Pengkondisian (If / Else)
+Ini adalah cara membuat program bisa "berpikir" dan mengambil keputusan. Blok kode di dalam if hanya akan dijalankan jika kondisinya bernilai true.
+
+JavaScript
+let lampuHijau = true;
+
+if (lampuHijau === true) {
+  console.log("Silakan jalan!"); // Dieksekusi karena kondisinya true
+} else {
+  console.log("Berhenti!"); 
+}
+========================================================================================================
+5. Fungsi (Function)
+Fungsi adalah blok kode yang dirancang untuk melakukan satu tugas spesifik. Anda membungkus kodenya, memberinya nama, dan bisa memanggilnya berkali-kali kapan pun butuh tanpa harus mengetik ulang instruksinya dari awal.
+
+JavaScript
+function sapaPengunjung(namaPengunjung) {
+  console.log(`Halo, selamat datang ${namaPengunjung}!`);
+}
+
+sapaPengunjung("Nadia"); // Output: Halo, selamat datang Nadia!
+sapaPengunjung("Sakti"); // Output: Halo, selamat datang Sakti!
+========================================================================================================
+1. () - Tanda Kurung Biasa (Parentheses)
+Digunakan untuk urusan eksekusi, parameter, kondisi, atau pengelompokan operasi.
+
+Menjalankan Fungsi (Execution) & Parameter: Digunakan saat membuat atau memanggil fungsi. Nilai di dalamnya disebut argumen atau parameter.
+
+Contoh: console.log("Halo") atau function hitungDiskon(subtotal)
+
+Membungkus Kondisi: Digunakan dalam struktur kontrol untuk mengevaluasi apakah suatu kondisi benar atau salah.
+
+Contoh: if (jarakKm > 10) atau switch (kodeVoucher) atau for (let i = 0; i < 5; i++)
+
+Prioritas Operasi Matematika: Mirip seperti di matematika dasar, bagian di dalam kurung biasa akan dihitung lebih dulu.
+
+Contoh: (subtotal - diskon) >= 75000
+========================================================================================================
+2. {} - Kurung Kurawal (Curly Braces)
+Digunakan untuk urusan blok kode dan pembuatan tipe data Object.
+
+Membungkus Blok Kode (Scope): Menandakan area "mulai" dan "selesai" dari sebuah fungsi, if/else, perulangan for, atau switch. Semua kode di dalam kurawal ini dianggap sebagai satu kesatuan.
+
+Contoh:
+
+JavaScript
+if (status === "valid") {
+    potongan = 20;
+    keterangan = "Diskon";
+} // Kurawal menandakan akhir dari blok if ini
+Membuat Object: Digunakan untuk menyimpan data berpasangan (ada key dan value).
+
+Contoh: const pelanggan = { nama: "Budi", umur: 25 };
+
+========================================================================================================
+3. [] - Kurung Siku (Square Brackets)
+Digunakan secara eksklusif untuk urusan Array.
+
+Membuat Array (Daftar): Digunakan untuk mengelompokkan banyak nilai ke dalam satu variabel secara berurutan.
+
+Contoh: const daftarMenu = ["Espresso", "Latte", "Croissant"];
+
+Mengakses Indeks Data: Digunakan untuk memanggil urutan data tertentu dari sebuah array (ingat, hitungan dimulai dari 0).
+
+Contoh: daftarMenu[0] (Ini akan memanggil "Espresso").
